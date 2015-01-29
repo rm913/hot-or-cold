@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 	
+<<<<<<< HEAD
 	var num = Math.floor(Math.random()*100) + 1;
 		console.log(num);
 	
@@ -54,6 +55,8 @@ $(document).ready(function(){
 	
 
 
+=======
+>>>>>>> 209c990e47738728b5a7e870f496e9ac69125bf2
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
