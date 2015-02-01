@@ -30,22 +30,22 @@ $(document).ready(function(){
 
 				console.log(diff);
 				if(diff >=70){
-					console.log('freezing cold');
+					$('#feedback').html("<h3>"+"You are Freezing cold!" + "</h3");
 				}
 				else if(diff >= 50){
-					console.log('cold');
+					$('#feedback').html("<h3>"+"You are cold!" + "</h3");
 				}
 				else if(diff >=30){
-					console.log('getting warmer');
+					$('#feedback').html("<h3>"+"You are getting warmer!" + "</h3");
 				}
 				else if(diff >=10){
-					console.log('hot');
+					$('#feedback').html("<h3>"+"getting pretty hot now!" + "</h3");
 				}
 				else if(diff >=5){
-					console.log('boiling hot!');
+					$('#feedback').html("<h3>"+"Boiling Hot!" + "</h3");
 				}
 				else if(diff == 0){
-					console.log('we have a winner');
+					$('#feedback').html("<h3>"+"We have a winner!" + "</h3");
 				}
 
 		
