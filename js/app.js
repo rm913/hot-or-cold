@@ -1,28 +1,53 @@
 
-
-$(document).ready(function(){
-	
-	function newNum(){
+ function generateNum(){
 
 	 return Math.floor(Math.random()*100) + 1;
 	}
+	generateNum();
+	var newNum = generateNum();
+	
+	
 
+$(document).ready(function(){
+	
 	
 	
 	
 	
 	$('#guessButton').click(function(){
+			event.preventDefault();
 		var guess = $('#userGuess').val();
 		guess = parseInt(guess);
 		console.log(guess, 'its clicked');
-	
+		console.log(newNum);
 		
 		
 
 
-			if(guess <=100) {
+			if(1<= guess <=100) {
 				$('#guessList').append("<li>"+guess+"</li>");
-				console.log('its a number');
+				var diff =  Math.abs(newNum - guess);
+
+				console.log(diff);
+				if(diff >=70){
+					console.log('freezing cold');
+				}
+				else if(diff >= 50){
+					console.log('cold');
+				}
+				else if(diff >=30){
+					console.log('getting warmer');
+				}
+				else if(diff >=10){
+					console.log('hot');
+				}
+				else if(diff >=5){
+					console.log('boiling hot!');
+				}
+				else if(diff == 0){
+					console.log('we have a winner');
+				}
+
 		
 			}
 			else{
@@ -33,15 +58,15 @@ $(document).ready(function(){
 	
 
 	/*--- Display information modal box ---*/
-//  	$(".what").click(function(){
-//    	$(".overlay").fadeIn(1000);
+ 	$(".what").click(function(){
+   	$(".overlay").fadeIn(1000);
 
-//  	});
+  	});
 
   	/*--- Hide information modal box ---*/
-//  	$("a.close").click(function(){
-//  		$(".overlay").fadeOut(1000);
- // 	});
+  	$("a.close").click(function(){
+  		$(".overlay").fadeOut(1000);
+	});
 
 });
 
