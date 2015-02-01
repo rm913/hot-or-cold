@@ -5,6 +5,7 @@
 	}
 	generateNum();
 	var newNum = generateNum();
+	var counter = 1;
 	
 	
 
@@ -26,6 +27,7 @@ $(document).ready(function(){
 
 			if(1<= guess <=100) {
 				$('#guessList').append("<li>"+guess+"</li>");
+				$('#count').html(counter++);
 				var diff =  Math.abs(newNum - guess);
 
 				console.log(diff);
