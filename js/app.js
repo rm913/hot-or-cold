@@ -57,7 +57,19 @@ $(document).ready(function(){
 			}
 		});
 
-	
+	$('.new').click(function(){
+		$('#feedback').html("<h3>" + "Make your guess!" + "</h3>");
+		$('#guessList').empty();
+		$('#userGuess').val('');
+		$('#count').html("0");
+		counter = 0;
+		counter ++;
+		generateNum();
+		var newNum = generateNum();
+		console.log(newNum);
+
+
+	});
 
 	/*--- Display information modal box ---*/
  	$(".what").click(function(){
